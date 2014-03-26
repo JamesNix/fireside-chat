@@ -6,11 +6,6 @@ html(class='no-js', lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='robots', content='noindex, nofollow')
     title Fireside chat
-    <!-- Favicon -->
-    link(rel='shortcut icon', href='/media/icons/favicon.ico', type='image/x-icon')
-    link(rel='icon', href='/media/icons/favicon.ico', type='image/x-icon')
-    <!-- Font Awesome -->
-    link(href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel='stylesheet')
     <!-- Bootstrap -->
     link(href='/css/bootstrap.min.css', rel='stylesheet')
     <!-- Styles -->
@@ -31,25 +26,8 @@ html(class='no-js', lang='en')
       input#nameInput(type='text', placeholder='name')
       input#messageInput(type='text', placeholder='your message')
       #messagesDiv
+        audio#alert(src='/media/pop_up_alert_tone.mp3', preload='auto')
 
-      script(type='text/javascript').
-        var myDataRef = new Firebase('https://luminous-fire-3912.firebaseio.com/');
-        $('#messageInput').keypress(function (e) {
-          if (e.keyCode == 13) {
-            var name = $('#nameInput').val();
-            var text = $('#messageInput').val();
-            myDataRef.push({name: name, text: text});
-            $('#messageInput').val('');
-          }
-        });
-        myDataRef.on('child_added', function(snapshot) {
-          var message = snapshot.val();
-          displayChatMessage(message.name, message.text);
-        });
-        function displayChatMessage(name, text) {
-          $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
-          $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-        };
 
 
 

@@ -20,6 +20,6 @@
   "browser": true,
   "jquery": true,
   "validthis": true,
-  "globals": {"_":true, "moment":true}
+  "globals": {"_":true, "moment":true, "Firebase":true}
 }
 
