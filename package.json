@@ -1,0 +1,22 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts":{
+    "start": "node app.js"
+  },
+  "dependencies":{
+    "connect": "*"
+  },
+  "devDependencies":{
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "jshint-stylish": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-clean": "*"
+  }
+}
+
