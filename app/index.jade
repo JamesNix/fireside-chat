@@ -18,7 +18,10 @@ html(class='no-js', lang='en')
     script(type='text/javascript', src='https://cdn.firebase.com/js/simple-login/1.3.0/firebase-simple-login.js')
 
   body
-    #header Fireside Chat
+    .row
+      .col-xs-4
+      .col-xs-4#header Fireside Chat
+      .col-xs-4
     #container.container-fluid
       input#nameInput(type='text', placeholder='name')
       input#messageInput(type='text', placeholder='your message')
@@ -28,7 +31,8 @@ html(class='no-js', lang='en')
           audio#alert(src='/media/pop_up_alert_tone.mp3', preload='auto')
         .col-xs-4
       button#reset(type='button') Scrap this chat
-      
+      button#fire(type='button') Make fire
+
 
 
 
