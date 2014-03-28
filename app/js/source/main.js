@@ -12,6 +12,7 @@
     myDataRef.on('child_added', pullData);
     $('#nameInput').focus();
     $('#reset').click(resetChat);
+    document.onload(resetChat);
     //weatherRef.child('temperature').on('value', getWeather());
   }
 
@@ -47,15 +48,18 @@
 
   function displayChatMessage(name, text){
     var $div = $('<div/>').addClass('messages');
+    var $clear = $('<div/>').addClass('clear');
 
     if(name !== $('#nameInput').val()){
       document.getElementById('alert').play();
       $div.addClass('foreign');
-      $div.text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+      $div.text(text).prepend($('<em/>').text(name+':  ')).appendTo($('#messagesDiv'));
+      $clear.appendTo($('#messagesDiv'));
       $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
     } else {
       $div.addClass('local');
-      $div.text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+      $div.text(text).prepend($('<em/>').text(name+':  ')).appendTo($('#messagesDiv'));
+      $clear.appendTo($('#messagesDiv'));
       $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
     }
   }
@@ -81,9 +85,9 @@
   // }
 
   function resetChat(){
-    myDataRef.set(null);
     $('#messagesDiv').empty();
     $('#nameInput').attr('disabled', 'false');
+    myDataRef.set(null);
   }
 
 })();
