@@ -17,11 +17,7 @@
   }
 
   var myDataRef = new Firebase('https://luminous-fire-3912.firebaseio.com/');
-
   //var weatherRef = new Firebase('https://publicdata-weather.firebaseio.com/nashville/currently');
-  var chatNames = []; //experimental (these four lines)
-  // var sessionId = 1;
-  // var colors = ['red', 'green', 'purple', 'brown', 'yellow', 'gray', 'chartreuse', 'coral', 'tomato', 'deeppink'];
 
   function pushData(e){
     if (e.keyCode === 13){
@@ -41,9 +37,6 @@
     displayChatMessage(message.name, message.text);
 
     chatNames.push(message.name); //experimental
-
-    // var currentName = message.name;
-    // assignAttribute(currentName);
   }
 
   function displayChatMessage(name, text){
@@ -63,22 +56,6 @@
       $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
     }
   }
-
-  // function assignAttribute(currentName){
-  //   debugger;
-  //   _.uniq(chatNames);
-  //   for(var i=0; i<chatNames.length; i++){
-  //     if(currentName === chatNames[i]){
-  //       currentName.css('color', 'blue');
-  //       return;
-  //     }
-  //   }
-  //   currentName.attr('id', sessionId);
-  //   currentName.css('color', colors.shift());
-  //   sessionId++;
-  //   console.log(currentName);
-  //   console.log(chatNames);
-  // }
 
   // function getWeather(snapshot){
   //   console.log('Temperature is currently ' + snapshot.val());
