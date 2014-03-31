@@ -45,7 +45,7 @@
     var $div = $('<div/>').addClass('messages');
     var $clear = $('<div/>').addClass('clear');
     var localUser = $('#nameInput').val();
-    var chatColors = ['lightblue', 'red', 'lightgreen', 'yellow', 'deeppink', 'chartreuse', 'goldenrod', 'lightsalmon', 'deeppink'];
+    var chatColors = ['lightblue', 'red', 'lightgreen', 'yellow', 'deeppink', 'chartreuse', 'goldenrod', 'lightsalmon', 'deeppink', 'CornflowerBlue', 'DarkOrange', 'gold', 'silver', 'LawnGreen', 'Linen'];
 
 
     if($.inArray(name, chatNames) === -1){ //Pushes name to array if not there
