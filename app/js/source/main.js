@@ -16,13 +16,11 @@
   }
 
   var myDataRef = new Firebase('https://luminous-fire-3912.firebaseio.com/');
-  //var localUser;
   var nameIndex;
   var chatNames = [];
 
   function pushData(e){
     if (e.keyCode === 13){
-    //localUser = $('#nameInput').val();  // Find a better way to do this
       var name = $('#nameInput').val();
       var text = $('#messageInput').val();
 
@@ -70,13 +68,13 @@
 
   function makeFire() {
     $('body').toggleClass('fire');
-    if($('#fire').text('Go to hell')){
-      $('#fire').text('');
-      $('#fire').text('... and back');
-    } else {
-      $('#fire').text('');
-      $('#fire').text('Go to hell');
-    }
+    // if($('#fire').text('Go to hell')){
+    //   $('#fire').text('');
+    //   $('#fire').text('... and back');
+    // } else {
+    //   $('#fire').text('');
+    //   $('#fire').text('Go to hell');
+    // }
   }
 
   function resetChat(){
