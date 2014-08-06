@@ -4,7 +4,6 @@ html(class='no-js', lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='robots', content='noindex, nofollow')
     title Fireside chat
     <!-- Bootstrap -->
     link(href='/css/bootstrap.min.css', rel='stylesheet')
@@ -32,7 +31,7 @@ html(class='no-js', lang='en')
       .row
         .col-xs-4
         .col-xs-4#messagesDiv.container-fluid
-          audio#alert(src='/media/pop_up_alert_tone.mp3', preload='auto')
+          audio#alert(src='/media/pop_up_alert_tone.mp3', preload='auto') <!-- plays tone in browser on incoming message -->
         .col-xs-4
       button#reset(type='button') Scrap this chat
       button#fire(type='button') Fire!

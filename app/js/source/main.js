@@ -35,13 +35,9 @@
     var message = snapshot.val();
 
     displayChatMessage(message.name, message.text);
-
-    console.log(message.name);
-    console.log(chatNames);
   }
 
   function displayChatMessage(name, text){
-    debugger;
     var $div = $('<div/>').addClass('messages');
     var $clear = $('<div/>').addClass('clear');
     var localUser = $('#nameInput').val();
@@ -56,7 +52,7 @@
     if(name === localUser){
       $div.addClass('local');
     } else {
-      document.getElementById('alert').play(); // Plays alert on incoming message
+      document.getElementById('alert').play(); // Plays alert on incoming message not from localUser
       $div.addClass('foreign');
     }
 
@@ -68,13 +64,6 @@
 
   function makeFire() {
     $('body').toggleClass('fire');
-    // if($('#fire').text('Go to hell')){
-    //   $('#fire').text('');
-    //   $('#fire').text('... and back');
-    // } else {
-    //   $('#fire').text('');
-    //   $('#fire').text('Go to hell');
-    // }
   }
 
   function resetChat(){
