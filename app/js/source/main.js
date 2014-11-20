@@ -19,12 +19,14 @@
   var nameIndex;
   var chatNames = [];
 
+
+// This section takes input values and pushes as object to my data ref on Firebase
   function pushData(e){
     if (e.keyCode === 13){
       var name = $('#nameInput').val();
       var text = $('#messageInput').val();
 
-      myDataRef.push({name: name, text: text}); // This section takes input values and pushes as object to my data ref on Firebase
+      myDataRef.push({name: name, text: text});
       $('#messageInput').val('');
       $('#messageInput').focus();
       $('#nameInput').attr('disabled', 'true'); // Prevents changing name mid-chat
